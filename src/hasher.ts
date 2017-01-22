@@ -1,10 +1,11 @@
 import crypto = require('crypto');
-let hasher = crypto.createHash('sha256');
+import Serializer = require('./serializer');
 
 export class Hasher {
 
-  hash(object, Serializer) {
+  getHash(object, Serializer) {
     let serialized = Serializer.serialize(object);
+    let hasher = crypto.createHash('sha256');
     return hasher.digest(serialized);
   }
 }
