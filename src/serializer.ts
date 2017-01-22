@@ -1,5 +1,3 @@
-export class Serializer  {
-  static serialize(object) {
-    JSON.stringify(object);
-  }
+export function  serialize(object) {
+  JSON.stringify(object);
 }
