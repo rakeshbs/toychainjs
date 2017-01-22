@@ -15,5 +15,9 @@
   },
   "dependencies": {
     "@types/es6-promise": "0.0.32"
+  },
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/hasher.ts"
   }
 }
