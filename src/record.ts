@@ -1,3 +1,5 @@
+import { Hasher } from "./Hasher";
+import Serializer = require('./serializer');
 export class Record {
 
   blob: String;
@@ -6,8 +8,8 @@ export class Record {
     this.blob = _blob;
   }
 
-  hash() {
-    //return this.blob.hash;
+  getHash() {
+    let hasher = new Hasher();
+    return hasher.getHash(this.blob, Serializer);
   }
 }
-
