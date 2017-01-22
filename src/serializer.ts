@@ -1,3 +1,3 @@
 export function  serialize(object) {
-  JSON.stringify(object);
+  return JSON.stringify(object);
 }
