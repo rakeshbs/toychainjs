@@ -1,5 +1,4 @@
 import crypto = require('crypto');
-import Serializer = require('./serializer');
 
 export class Hasher {
 
