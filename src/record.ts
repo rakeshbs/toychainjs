@@ -1,4 +1,4 @@
-import { Hasher } from "./Hasher";
+import { Hasher } from "./hasher";
 import Serializer = require('./serializer');
 export class Record {
 
