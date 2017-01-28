@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/record_list.ts"
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/record_list.ts",
+    "test": "alsatian \"./test/*.test.js\""
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^7.0.4",
+    "alsatian": "^1.1.0",
     "nodemon": "^1.11.0",
     "ts-node": "^2.0.0",
     "typescript": "^2.1.5"

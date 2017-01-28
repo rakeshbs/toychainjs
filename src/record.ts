@@ -2,11 +2,7 @@ import { Hasher } from "./hasher";
 import Serializer = require('./serializer');
 export class Record {
 
-  blob: String;
-
-  constructor(_blob: String) {
-    this.blob = _blob;
-  }
+  constructor(public blob: String) { }
 
   getHash() {
     let hasher = new Hasher();
