@@ -1,9 +1,17 @@
-import { Expect, Test } from "alsatian";
-import { Record } from "../src/record";
+import 'mocha';
+import { expect } from 'chai';
+import { Record } from '../src/record';
+import { Hasher } from '../src/hasher';
+import Serializer = require('../src/serializer');
 
-export class RecordTests {
-    @Test()
-    public instantiateClassWithoutError() {
-        Expect(() => new Record("Test")).not.toThrow();
-    }
-}
+
+describe('record', () => {
+    it('should instantiate without error', () => {
+        expect(new Record("Test")).instanceOf(Record);
+    });
+
+    it('should get the correct hash using hasher', () => {
+        let test_val = new Hasher().getHash('Test',Serializer);
+        expect(new Record("Test").getHash()).equals(test_val);
+    });
+});

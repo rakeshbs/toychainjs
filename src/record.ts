@@ -14,7 +14,7 @@ export class Record {
     let h2 = r2.getHash();
     if (h1 === h2) return 0;
     if (h1 > h2 ) return 1;
-    else return -1;
-  }
+    else return -1;   
+  } 
 }
 
