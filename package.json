@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon -e ts --exec 'npm test'  --watch 'src/**/*.ts'",
-    "test": "mocha -r ts-node/register test/*.test .ts"
+    "test": "mocha -r ts-node/register test/*.test.ts"
   },
   "author": "",
   "license": "MIT",
