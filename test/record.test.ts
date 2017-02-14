@@ -14,4 +14,10 @@ describe('record', () => {
         let test_val = new Hasher().getHash('Test',Serializer);
         expect(new Record("Test").getHash()).equals(test_val);
     });
+
+    it('should provide the correct comparison', () => {
+        expect(new Record("Test").compare(new Record("Test1"))).equals(1);  
+        expect(new Record("Test1").compare(new Record("Test"))).equals(-1);
+        expect(new Record("Test").compare(new Record("Test"))).equals(0);
+    } );
 });
