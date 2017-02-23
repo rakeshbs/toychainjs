@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/record_list.ts",
-    "test": "alsatian \"./test/*.test.js\""
+    "build:live": "nodemon -e ts --exec 'npm test'  --watch 'src/**/*.ts'",
+    "test": "mocha -r ts-node/register test/*.test.ts"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.38",
     "@types/node": "^7.0.4",
-    "alsatian": "^1.1.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "ts-node": "^2.0.0",
     "typescript": "^2.1.5"
